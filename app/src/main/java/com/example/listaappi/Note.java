@@ -6,25 +6,31 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class Note {
     private static int idCounter = 1;
-    private int id;
+    private int Id;
     private String title;
     private String content;
     private String timeAndDate;
 
     public Note(String title, String content) {
-        this.id = idCounter++;
+        this.Id = idCounter++;
         this.title = title;
         this.content = content;
+
         this.timeAndDate = new SimpleDateFormat("HH:mm dd.MM.yyyy").format(new Date());
+
+
     }
 
     public int getId() {
-        return id;
+        return Id;
     }
+
 
     public String getTitle() {
         return title;
     }
+
+
 
     public String getContent() {
         return content;
@@ -35,7 +41,10 @@ public class Note {
     }
 
     @Override
+
+
     public String toString() {
         return title;
     }
+
 }
